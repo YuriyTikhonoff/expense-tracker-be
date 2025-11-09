@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  be-dev:
+    build:
+      context: .
+      target: dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+      - ./tsconfig.json:/app/tsconfig.json
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+
+  be-prod:
+    build:
+      context: .
+      target: production
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
