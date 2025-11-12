@@ -5,7 +5,7 @@ const app = express();
 const PORT = config.port;
 
 app.get("/", (_req: unknown, res: unknown) => {
-  (res as { send: (arg: string) => void }).send("Hello World!******");
+  (res as { send: (arg: string) => void }).send("Hello World!----");
 });
 
 const startServer = async () => {
