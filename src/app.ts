@@ -1,7 +1,8 @@
 const express = require("express");
 const db = require("./database/connection");
+const configSetting = require("./config");
 const app = express();
-const PORT = 3000;
+const PORT = configSetting.config.port;
 
 app.get("/", (_req: unknown, res: unknown) => {
   (res as { send: (arg: string) => void }).send("Hello World!******");
