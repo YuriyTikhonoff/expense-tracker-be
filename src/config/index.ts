@@ -9,4 +9,4 @@ const config = {
 
 console.log("process.env.PORT", process.env.PORT);
 
-module.exports = { config };
+export = { config };
