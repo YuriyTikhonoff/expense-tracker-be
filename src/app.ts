@@ -1,10 +1,11 @@
 const express = require("express");
 const db = require("./database/connection");
+const { config } = require("./config");
 const app = express();
-const PORT = 3000;
+const PORT = config.port;
 
 app.get("/", (_req: unknown, res: unknown) => {
-  (res as { send: (arg: string) => void }).send("Hello World!******");
+  (res as { send: (arg: string) => void }).send("Hello World!----");
 });
 
 const startServer = async () => {
