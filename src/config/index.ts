@@ -7,6 +7,4 @@ const config = {
   port: process.env.PORT ? Number.parseInt(process.env.PORT, 10) : DEFAULT_PORT,
 };
 
-console.log("process.env.PORT", process.env.PORT);
-
 export = { config };
