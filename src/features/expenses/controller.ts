@@ -1,6 +1,7 @@
+import type { Request, Response } from "express";
 class ExpenseController {
-  async getExpenses(_req: unknown, res: unknown) {
-    (res as { send: (arg: string) => void }).send("List of expenses");
+  async getExpenses(_req: Request, res: Response) {
+    res.send("List of expenses");
   }
 }
 
