@@ -2,7 +2,7 @@ const { ExpensesModel } = require("./model");
 
 class ExpensesService {
   async listExpenses() {
-    return await ExpensesModel.fetchAll();
+    return ExpensesModel.fetchAll();
   }
 }
 
